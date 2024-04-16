@@ -16,33 +16,33 @@ const products = [
   },
   {
     id: "15b6fc6f-327a-4ec4-896f-486349e85a3d",
-    image: "images/products/intermediate-composite-basketball.jpg",
-    name: "Intermediate Size Basketball",
+    image: "images/products/minecraft-2-1110593.jpeg",
+    name: "Minecraft",
     rating: {
       stars: 4,
       count: 127
     },
-    priceCents: 2095,
+    priceCents: 1999,
     keywords: [
-      "sports",
-      "basketballs"
+      "games",
+      "Minecraft"
     ]
   },
   {
     id: "83d4ca15-0f35-48f5-b7a3-1ea210004f2e",
-    image: "images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg",
-    name: "Adults Plain Cotton T-Shirt - 2 Pack",
+    image: "images/products/switchhac001-01.jpg",
+    name: "Nintendo Switch",
     rating: {
       stars: 4.5,
-      count: 56
+      count: 900
     },
-    priceCents: 799,
+    priceCents: 29900,
     keywords: [
-      "tshirts",
-      "apparel",
-      "mens"
+      "games",
+      "console",
+      "Switch"
     ],
-    type: "clothing",
+    type: "console",
     sizeChartLink: "images/clothing-size-chart.png"
   },
   {
