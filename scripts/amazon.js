@@ -51,20 +51,14 @@ products.forEach((product) =>{  //function productsLoop(product)
         </div>
 
         <button class="add-to-cart-button button-primary js-add-to-cart"
-        data-product-id="${product.id}"> 
+        data-product-id = "${product.id}"> 
         Add to Cart
         </button>
-  </div>`
+  </div>`;
 });
 
 
-function updateCart(){
-    let cartQauntity = 0;
-    cart.forEach((cartItem) => {
-        cartQauntity += cartItem.quantity;
-    });
-    document.querySelector('.js-cartQuant').innerHTML = cartQauntity;
-}
+
 
 document.querySelector('.productGridJs').innerHTML = productsHtml;
 
@@ -73,7 +67,16 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
         const productId = button.dataset.productId; //data set name goes from kebab case to camel case
         addtoCart(productId);
         updateCart();
+        console.log(updateCart)
         
         
     });
 });
+
+function updateCart(){
+    let cartQauntity = 0;
+    cart.forEach((cartItem) => {
+        cartQauntity += cartItem.quantity;
+    });
+    document.querySelector('.js-cartQuant').innerHTML = cartQauntity;
+}
