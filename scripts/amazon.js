@@ -66,9 +66,10 @@ document.querySelectorAll('.js-add-to-cart').forEach((button) => {
     button.addEventListener('click', () =>{
         const productId = button.dataset.productId; //data set name goes from kebab case to camel case
         addtoCart(productId);
+
         updateCart();
         console.log(updateCart)
-        
+        console.log(document.querySelector('.js-cartQuant').innerHTML)
         
     });
 });
@@ -78,5 +79,6 @@ function updateCart(){
     cart.forEach((cartItem) => {
         cartQauntity += cartItem.quantity;
     });
+    console.log(cartQauntity);
     document.querySelector('.js-cartQuant').innerHTML = cartQauntity;
 }
