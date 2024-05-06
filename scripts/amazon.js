@@ -56,10 +56,6 @@ products.forEach((product) =>{  //function productsLoop(product)
         </button>
   </div>`;
 });
-
-
-
-
 document.querySelector('.productGridJs').innerHTML = productsHtml;
 
 document.querySelectorAll('.js-add-to-cart').forEach((button) => {
