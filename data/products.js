@@ -704,8 +704,6 @@ export const products = [
       "mens"
     ]
   }
-]
-
-/*.map((productDetails) => {
-  new Product(productDetails);
-}); */
+].map((productDetails) => {
+  return new Product(productDetails);
+}); 
