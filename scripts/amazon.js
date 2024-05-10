@@ -1,6 +1,8 @@
 import {cart, addtoCart} from '../data/cart.js';
 
-import {products} from '../data/products.js';
+import {products, loadProducts} from '../data/products.js';
+
+loadProducts(renderAmazonPage);
 
 function renderAmazonPage(){ 
     let productsHtml = '';
@@ -83,4 +85,3 @@ function renderAmazonPage(){
     }
 }
 
-renderAmazonPage();
