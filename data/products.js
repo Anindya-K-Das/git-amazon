@@ -35,7 +35,27 @@ class Product{
   getPrice(){
     return `$${formatCurrency(this.priceCents)}`
   }
+
+  extraInfoHTML(){
+    return '';
+  }
 }
+
+class Clothing extends Product{
+  sizeChartLink;
+
+  constructor(productDetails){
+    super(productDetails);
+    this.sizeChartLink = productDetails.sizeChartLink;
+  }
+
+  extraInfoHTML(){
+    return `
+      <a href="${this.sizeChartLink}" target="_blank">Size Chart</a>
+    `;
+  }
+}
+
 
 export const products = [
   {
@@ -697,5 +717,32 @@ export const products = [
     ]
   }
 ].map((productDetails) => {
+  if(productDetails.type === 'clothing'){
+    return new Clothing(productDetails);
+  }
   return new Product(productDetails);
 }); 
+
+
+const tshirt = new Clothing(
+  {
+    id: "8b5a2ee1-6055-422a-a666-b34ba28b76d4",
+    image: "images/products/men-golf-polo-t-shirt-blue.jpg",
+    name: "Men's Regular-Fit Quick-Dry Golf Polo Shirt",
+    rating: {
+      stars: 4.5,
+      count: 2556
+    },
+    priceCents: 1599,
+    keywords: [
+      "tshirts",
+      "shirts",
+      "apparel",
+      "mens"
+    ],
+    type: "clothing",
+    sizeChartLink: "images/clothing-size-chart.png"
+  }
+)
+
+console.log(tshirt);
